@@ -63,7 +63,7 @@ function stringToHex (str, modelName) {
 // 封装函数，用于将 chunk 转换为 UTF-8 字符串
 function chunkToUtf8String (chunk) {
   // 只处理以 0x00 0x00 0x00 0x00 开头的 chunk，其他不处理，不然会有乱码
-  if (!(chunk[0] === 0x00 && chunk[1] === 0x00 && chunk[2] === 0x00 && chunk[3] === 0x00)) {
+  if (!(chunk[0] === 0x00 && chunk[1] === 0x00)) {
     return ''
   }
 
