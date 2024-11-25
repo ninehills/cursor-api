@@ -29,7 +29,7 @@
 - git clone https://github.com/waitkafuka/cursor-api.git  
 - cd cursor-api  
 2. 安装依赖  
-- yarn
+- yarn install
 3. 启动服务
 - yarn dev（开发环境）
 - yarn start（生产环境方式一）
