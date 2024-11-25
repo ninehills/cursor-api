@@ -8,9 +8,9 @@
 
 ## 使用前准备
 
-1. 访问 [www.cursor.com](https://www.cursor.com) 并完成注册登录（赠送500次快速响应，可通过删除账号再注册重置）
+1. 访问 [www.cursor.com](https://www.cursor.com) 并完成注册登录（赠送 500 次快速响应，可通过删除账号再注册重置）
 2. 在浏览器中打开开发者工具（F12）
-3. 找到 应用-Cookies 中名为 `WorkosCursorSessionToken` 的值并保存(相当于openai的密钥)
+3. 找到 应用-Cookies 中名为 `WorkosCursorSessionToken` 的值并保存(相当于 openai 的密钥)
 
 ## 接口说明
 
@@ -18,22 +18,39 @@
 
 - 接口地址：`http://localhost:3000/v1/chat/completions`
 - 请求方法：POST
-- 认证方式：Bearer Token（使用 WorkosCursorSessionToken 的值，支持英文逗号分隔的key入参）
+- 认证方式：Bearer Token（使用 WorkosCursorSessionToken 的值，支持英文逗号分隔的 key 入参）
 
-### 请求格式和响应格式参考openai
+### 请求格式和响应格式参考 openai
 
+## 生产环境部署
 
-## 快速开始
+### 方式一：docker-compose 部署（推荐）
 
-1. 克隆项目  
-- git clone https://github.com/waitkafuka/cursor-api.git  
-- cd cursor-api  
-2. 安装依赖  
-- yarn install
-3. 启动服务
-- yarn dev（开发环境）
-- yarn start（生产环境方式一）
-- pm2 start ecosystem.config.js（生产环境方式二）
+```bash
+docker-compose up -d
+```
+
+### 方式二：docker 部署
+
+```bash
+docker run -d --name cursor-api -p 3000:3000 waitkafuka/cursor-api:latest
+```
+
+### 方式三：pm2 部署
+
+```bash
+cd cursor-api
+npm install
+pm2 start ecosystem.config.js
+```
+
+## 本地开发
+
+```bash
+cd cursor-api
+npm install
+npm run dev
+```
 
 ## 注意事项
 
