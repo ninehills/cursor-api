@@ -27,7 +27,7 @@
 ### 方式一：docker-compose 部署（推荐）
 
 ```bash
-docker-compose up -d
+docker compose up -d
 ```
 
 ### 方式二：docker 部署
