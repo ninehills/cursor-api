@@ -1,7 +1,10 @@
 version: '3'
 services:
   cursor-api:
-    image: waitkafuka/cursor-api:latest
+    #image: waitkafuka/cursor-api:latest
+    build:
+      context: ./
+      dockerfile: Dockerfile
     ports:
       - "3000:3000"
     environment:
